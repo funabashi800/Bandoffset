@@ -1,0 +1,165 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Band Gap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="my-container">
+        <h2>Welcome to Fujishiro Lab</h2>
+        <div id="form-container">
+            <form action="index.py" method="POST">
+                <div id="material1-container">
+                    <select name="material1" id="material1">
+                    <optgroup label="Binary">
+                        <option value="" selected disabled hidden>Material1</option>
+                        <option value="AlP">AlP</option>
+                        <option value="AlAs">AlAs</option>
+                        <option value="AlSb">AlSb</option>
+                        <option value="GaP">GaP</option>
+                        <option value="GaAs">GaAs</option>
+                        <option value="GaSb">GaSb</option>
+                        <option value="InP">InP</option>
+                        <option value="InAs">InAs</option>
+                        <option value="InAs">InSb</option>
+                    </optgroup>
+
+                    <optgroup label="Ternary">
+                        <option value="AlAsSb">AlAsSb</option>
+                        <option value="AlGaP">AlGaP</option>
+                        <option value="AlGaAs">AlGaAs</option>
+                        <option value="AlGaSb">AlGaSb</option>
+                        <option value="AlInP">AlInP</option>
+                        <option value="AlInAs">AlInAs</option>
+                        <option value="GaPAs">GaPAs</option>
+                        <option value="GaAsSb">GaAsSb</option>
+                        <option value="GaInP">GaInP</option>
+                        <option value="GaInAs">GaInAs</option>
+                        <option value="GaInSb">GaInSb</option>
+                        <option value="InPAs">InPAs</option>
+                        <option value="InPSb">InPSb</option>
+                        <option value="InAsSb">InAsSb</option>
+                    </optgroup>
+
+                    <optgroup label="Quaternary">
+                        <option value="AlGaInP">AlGaInP</option>
+                        <option value="AlGaInAs">AlGaInAs</option>
+                        <option value="AlGaAsSb">AlGaAsSb</option>
+                        <option value="GaInPAs">GaInPAs</option>
+                        <option value="GaInAsSb">GaInAsSb</option>
+                        <option value="InPAsSb">InPAsSb</option>
+                    </optgroup>
+
+                    </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
+                </div>
+                <div id="material2-container">
+                    <select name="material2" id="material2">
+                        <optgroup label="Binary">
+                            <option value="" selected disabled hidden>Material2</option>
+                            <option value="AlP">AlP</option>
+                            <option value="AlAs">AlAs</option>
+                            <option value="AlSb">AlSb</option>
+                            <option value="GaP">GaP</option>
+                            <option value="GaAs">GaAs</option>
+                            <option value="GaSb">GaSb</option>
+                            <option value="InP">InP</option>
+                            <option value="InAs">InAs</option>
+                            <option value="InAs">InSb</option>
+                        </optgroup>
+        
+                        <optgroup label="Ternary">
+                            <option value="AlAsSb">AlAsSb</option>
+                            <option value="AlGaP">AlGaP</option>
+                            <option value="AlGaAs">AlGaAs</option>
+                            <option value="AlGaSb">AlGaSb</option>
+                            <option value="AlInP">AlInP</option>
+                            <option value="AlInAs">AlInAs</option>
+                            <option value="GaPAs">GaPAs</option>
+                            <option value="GaAsSb">GaAsSb</option>
+                            <option value="GaInP">GaInP</option>
+                            <option value="GaInAs">GaInAs</option>
+                            <option value="GaInSb">GaInSb</option>
+                            <option value="InPAs">InPAs</option>
+                            <option value="InPSb">InPSb</option>
+                            <option value="InAsSb">InAsSb</option>
+                        </optgroup>
+        
+                        <optgroup label="Quaternary">
+                            <option value="AlGaInP">AlGaInP</option>
+                            <option value="AlGaInAs">AlGaInAs</option>
+                            <option value="AlGaAsSb">AlGaAsSb</option>
+                            <option value="GaInPAs">GaInPAs</option>
+                            <option value="GaInAsSb">GaInAsSb</option>
+                            <option value="InPAsSb">InPAsSb</option>
+                        </optgroup>
+            
+                    </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
+                </div>
+                
+                <div id="material3-container">
+                    <select name="material3" id="material3">
+                            <optgroup label="Binary">
+                                <option value="" selected disabled hidden>Material3</option>
+                                <option value="AlP">AlP</option>
+                                <option value="AlAs">AlAs</option>
+                                <option value="AlSb">AlSb</option>
+                                <option value="GaP">GaP</option>
+                                <option value="GaAs">GaAs</option>
+                                <option value="GaSb">GaSb</option>
+                                <option value="InP">InP</option>
+                                <option value="InAs">InAs</option>
+                                <option value="InAs">InSb</option>
+                            </optgroup>
+            
+                            <optgroup label="Ternary">
+                                <option value="AlAsSb">AlAsSb</option>
+                                <option value="AlGaP">AlGaP</option>
+                                <option value="AlGaAs">AlGaAs</option>
+                                <option value="AlGaSb">AlGaSb</option>
+                                <option value="AlInP">AlInP</option>
+                                <option value="AlInAs">AlInAs</option>
+                                <option value="GaPAs">GaPAs</option>
+                                <option value="GaAsSb">GaAsSb</option>
+                                <option value="GaInP">GaInP</option>
+                                <option value="GaInAs">GaInAs</option>
+                                <option value="GaInSb">GaInSb</option>
+                                <option value="InPAs">InPAs</option>
+                                <option value="InPSb">InPSb</option>
+                                <option value="InAsSb">InAsSb</option>
+                            </optgroup>
+            
+                            <optgroup label="Quaternary">
+                                <option value="AlGaInP">AlGaInP</option>
+                                <option value="AlGaInAs">AlGaInAs</option>
+                                <option value="AlGaAsSb">AlGaAsSb</option>
+                                <option value="GaInPAs">GaInPAs</option>
+                                <option value="GaInAsSb">GaInAsSb</option>
+                                <option value="InPAsSb">InPAsSb</option>
+                            </optgroup>
+                
+                    </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
+                </div>
+                <button type="submit" value="send">Calculate!</button>
+            </form>
+    </div>
+    </div>
+
+    
+</body>
+</html>
