@@ -183,9 +183,9 @@ class AlAsSb(object):
         a = AlAs()
         b = AlSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
         self.valence_band_average = -6.66
         self.spin_orbit_splitting = 0.65
         self.band_gap = 0.0
@@ -202,15 +202,17 @@ class AlAsSb(object):
 
 class AlGaP(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = AlP()
+        b = GaP()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -222,15 +224,17 @@ class AlGaP(object):
 
 class AlGaAs(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = AlAs()
+        b = GaAs()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -242,15 +246,17 @@ class AlGaAs(object):
 
 class AlGaSb(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = AlSb()
+        b = GaSb()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -262,15 +268,17 @@ class AlGaSb(object):
 
 class AlInP(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = AlP()
+        b = InP()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -282,15 +290,17 @@ class AlInP(object):
 
 class AlInAs(object):
     def __init__(self,x):
-        self.lattice_constant = x*AlAs.lattice_constant+(1-x)*InAs.lattice_constant
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = AlAs()
+        b = InAs()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -300,17 +310,19 @@ class AlInAs(object):
         print("Spin orbit : {}".format(self.spin_orbit))
         print("Band gap : {}".format(self.band_gap))
 
-class AlPAs(object):
+class GaPAs(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = GaP()
+        b = GaAs()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -322,15 +334,17 @@ class AlPAs(object):
 
 class GaAsSb(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = GaAs()
+        b = GaSb()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -342,15 +356,17 @@ class GaAsSb(object):
 
 class GaInP(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = GaP()
+        b = InP()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -362,15 +378,17 @@ class GaInP(object):
 
 class GaInSb(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = GaSb()
+        b = InSb()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -382,15 +400,17 @@ class GaInSb(object):
 
 class InPAs(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = InP()
+        b = InAs()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -402,15 +422,17 @@ class InPAs(object):
 
 class InPSb(object):
     def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+        a = InP()
+        b = InSb()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
@@ -421,16 +443,41 @@ class InPSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class InAsSb(object):
-    def __init__(self):
-        self.lattice_constant = 6.136
-        self.elastic_constant_11 = 0.88
-        self.elastic_constant_12 = 0.43
-        self.elastic_constant_44 = 0.41
-        self.valence_band_average = -6.66
-        self.spin_orbit_splitting = 0.65
-        self.band_gap = 2.22 #Ganma
-        self.deformation_valence = -1.38
-        self.deformation_conduction = -6.97 #Ganma
+    def __init__(self): 
+        a = InAs()
+        b = InSb()
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
+        self.conduction_band = 0.0
+        self.valence_band = 0.0
+
+    def info(self):
+        print("Lattice constant : {}".format(self.lattice_constant))
+        print("Valence band average : {}".format(self.valence_band_average))
+        print("Spin orbit : {}".format(self.spin_orbit))
+        print("Band gap : {}".format(self.band_gap))
+
+class AlGaInP(object):
+    def __init__(self): 
+        a = AlGa()
+        b = InSb()
+
+        self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1-x)*b.spin_orbit_splitting
+        self.band_gap = x*a.band_gap+(1-x)*b.band_gap
+        self.deformation_valence = x*a.deformation_valence+(1-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1-x)*b.deformation_conduction
         self.conduction_band = 0.0
         self.valence_band = 0.0
 
