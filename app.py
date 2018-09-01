@@ -16,9 +16,12 @@ def result():
         material1 = request.form.get('material1')
         material2 = request.form.get('material2')
         material3 = request.form.get('material3')
-        material_1 = material1()
-        material_2 = material2()
-        material_3 = material3()
+        a = getattr(param_all, material1)
+        b = getattr(param_all, material2)
+        c = getattr(param_all, material3)
+        material_1 = a()
+        material_2 = b()
+        material_3 = c()
 
         #### on channel
         a_1 = material_3.lattice_constant
@@ -50,7 +53,7 @@ def result():
         energies = [[material_1.conduction_band,material_1.valence_band],[material_2.conduction_band,material_2.valence_band],[material_2.conduction_band,material_2.valence_band]]
         materials = [material1,material2,material3]
         #macro_plot.energy_band_alignment_diagram(energies,materials,limit=10,arrowhead=0.1)
-        return render_template('hello.html')
+        return render_template('result.html', result=material1)
 
 
 
