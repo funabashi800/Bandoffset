@@ -203,7 +203,7 @@ class AlAsSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlGaP(object):
-    def __init__(self):
+    def __init__(self,x):
         a = AlP()
         b = GaP()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -225,7 +225,7 @@ class AlGaP(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlGaAs(object):
-    def __init__(self):
+    def __init__(self,x):
         a = AlAs()
         b = GaAs()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -247,7 +247,7 @@ class AlGaAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlGaSb(object):
-    def __init__(self):
+    def __init__(self,x):
         a = AlSb()
         b = GaSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -269,7 +269,7 @@ class AlGaSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlInP(object):
-    def __init__(self):
+    def __init__(self,x):
         a = AlP()
         b = InP()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -313,7 +313,7 @@ class AlInAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaPAs(object):
-    def __init__(self):
+    def __init__(self,x):
         a = GaP()
         b = GaAs()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -335,7 +335,7 @@ class GaPAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaAsSb(object):
-    def __init__(self):
+    def __init__(self,x):
         a = GaAs()
         b = GaSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -357,7 +357,7 @@ class GaAsSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaInP(object):
-    def __init__(self):
+    def __init__(self,x):
         a = GaP()
         b = InP()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -379,7 +379,7 @@ class GaInP(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaInAs(object):
-    def __init__(self):
+    def __init__(self,x):
         a = GaAs()
         b = InAs()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -395,7 +395,7 @@ class GaInAs(object):
         self.valence_band = 0.0
 
 class GaInSb(object):
-    def __init__(self):
+    def __init__(self,x):
         a = GaSb()
         b = InSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -417,7 +417,7 @@ class GaInSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class InPAs(object):
-    def __init__(self):
+    def __init__(self,x):
         a = InP()
         b = InAs()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -439,7 +439,7 @@ class InPAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class InPSb(object):
-    def __init__(self):
+    def __init__(self,x):
         a = InP()
         b = InSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -461,7 +461,7 @@ class InPSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class InAsSb(object):
-    def __init__(self): 
+    def __init__(self,x): 
         a = InAs()
         b = InSb()
         self.lattice_constant = x*a.lattice_constant+(1-x)*b.lattice_constant
@@ -511,7 +511,7 @@ class AlGaInP(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlGaInAs(object):
-    def __init__(self): 
+    def __init__(self,x,y): 
         a = AlAs()
         b = GaAs()
         c = InAs()
@@ -537,7 +537,7 @@ class AlGaInAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class AlGaAsSb(object):
-    def __init__(self): 
+    def __init__(self,x,y): 
         a = AlGaAs()
         b = AlGaSb()
         c = AlAsSb()
@@ -571,7 +571,7 @@ class AlGaAsSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaInPAs(object):
-    def __init__(self): 
+    def __init__(self,x,y): 
         a = GaInP()
         b = GaInAs()
         c = GaPAs()
@@ -605,7 +605,7 @@ class GaInPAs(object):
         print("Band gap : {}".format(self.band_gap))
 
 class GaInAsSb(object):
-    def __init__(self): 
+    def __init__(self,x,y): 
         a = GaInAs()
         b = GaInSb()
         c = GaAsSb()
@@ -639,7 +639,7 @@ class GaInAsSb(object):
         print("Band gap : {}".format(self.band_gap))
 
 class InPAsSb(object):
-    def __init__(self): 
+    def __init__(self,x,y): 
         a = InP()
         b = InAs()
         c = InSb()
