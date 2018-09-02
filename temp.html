@@ -12,7 +12,7 @@
     <div id="my-container">
         <h2>Welcome to Fujishiro Lab</h2>
         <div id="form-container">
-            <form action="/result" method="POST">
+            <form action="http://127.0.0.1:5000/result" method="POST">
                 <div id="material1-container">
                     <select name="material1" id="material1">
                     <optgroup label="Binary">
@@ -25,7 +25,7 @@
                         <option value="GaSb">GaSb</option>
                         <option value="InP">InP</option>
                         <option value="InAs">InAs</option>
-                        <option value="InSb">InSb</option>
+                        <option value="InAs">InSb</option>
                     </optgroup>
 
                     <optgroup label="Ternary">
@@ -55,6 +55,10 @@
                     </optgroup>
 
                     </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
                 </div>
                 <div id="material2-container">
                     <select name="material2" id="material2">
@@ -68,7 +72,7 @@
                             <option value="GaSb">GaSb</option>
                             <option value="InP">InP</option>
                             <option value="InAs">InAs</option>
-                            <option value="InSb">InSb</option>
+                            <option value="InAs">InSb</option>
                         </optgroup>
         
                         <optgroup label="Ternary">
@@ -98,6 +102,10 @@
                         </optgroup>
             
                     </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
                 </div>
                 
                 <div id="material3-container">
@@ -112,7 +120,7 @@
                                 <option value="GaSb">GaSb</option>
                                 <option value="InP">InP</option>
                                 <option value="InAs">InAs</option>
-                                <option value="InSb">InSb</option>
+                                <option value="InAs">InSb</option>
                             </optgroup>
             
                             <optgroup label="Ternary">
@@ -142,6 +150,10 @@
                             </optgroup>
                 
                     </select>
+                    <label for="x">x: </label>
+                    <input type="text" name="x">
+                    <label for="y">y: </label>
+                    <input type="text" name="y">
                 </div>
                 <button type="submit" value="send">Calculate!</button>
             </form>

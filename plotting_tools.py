@@ -1,8 +1,9 @@
 from __future__ import print_function, division
 import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib as mpl
-from cycler import cycler
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+
 
 def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
                                   cols=['#74356C','#efce19'], textsize=22,
@@ -43,8 +44,8 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
     mpl.rcParams['ytick.minor.size'] = 4
     mpl.rcParams['axes.linewidth'] = 3
 
-    #ax1.set_color_cycle(cols)
-    ax1.set_prop_cycle(cycler('color', cols))
+    ax1.set_color_cycle(cols)
+    #ax1.set_prop_cycle(cols)
     ax2 = ax1.twinx()
     ind = np.arange(len(energies))
 
@@ -54,8 +55,8 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
         ax1.bar(i,-energies[i][1], width, color='w', edgecolor=None)
 
     ## Reset the colours back to the start and plot the EA
-    #ax1.set_color_cycle(cols)
-    ax1.set_prop_cycle(cycler('color', cols))
+    ax1.set_color_cycle(cols)
+    #ax1.set_prop_cycle(cols)
     for i in ind:
         ax1.bar(i,-energies[i][0], width, edgecolor=None,alpha=0.8)
 
@@ -102,8 +103,11 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
         ax1.text(len(energies) - 0.45, -ref[1] - 0.1, ref[0],
                  fontsize=textsize, color='r')
 
-    fig.savefig('%s.eps'%outfile,bbox_inches='tight')
-    fig.savefig('%s.png'%outfile,bbox_inches='tight')
-    plt.show()
-    print("Figure saved as %s.eps and %s.png"%(outfile, outfile))
-    plt.close(fig)
+    #fig.savefig('/Users/takahiro/workspace/bandoffset/img/%s.eps'%outfile,bbox_inches='tight')
+    #fig.savefig('%s.png'%outfile,bbox_inches='tight')
+    fig.savefig('static/images/BandAlignment.png', bbox_inches='tight')
+    #plt.savefig('static/images/BandAlignment.png', bbox_inches='tight')
+    
+    #plt.show()
+    #print("Figure saved as %s.eps and %s.png"%(outfile, outfile))
+    #plt.close(fig)
