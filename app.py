@@ -19,9 +19,15 @@ def result():
         a = getattr(param_all, material1)
         b = getattr(param_all, material2)
         c = getattr(param_all, material3)
-        material_1 = a()
-        material_2 = b()
-        material_3 = c()
+        x1 = request.form.get('x1')
+        y1 = request.form.get('y1')
+        x2 = request.form.get('x2')
+        y2 = request.form.get('y2')
+        x3 = request.form.get('x3')
+        y3 = request.form.get('y3')
+        material_1 = a(float(x1), float(y1))
+        material_2 = b(float(x2), float(y2))
+        material_3 = c(float(x3), float(y3))
 
         #### on channel
         a_1 = material_3.lattice_constant
