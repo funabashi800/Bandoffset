@@ -6,12 +6,13 @@
     <title>Band Gap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="main.js"></script>
 </head>
 <body>
     <div id="my-container">
         <h2>Welcome to Fujishiro Lab</h2>
-        <div id="form-container">
+        <div id="form-container" class="container">
             <form action="/result" method="POST">
                 <div id="material1-container">
                     <select name="material1" id="material1">
@@ -29,36 +30,36 @@
                     </optgroup>
 
                     <optgroup label="Ternary">
-                        <option value="AlAsSb">AlAsSb</option>
-                        <option value="AlGaP">AlGaP</option>
-                        <option value="AlGaAs">AlGaAs</option>
-                        <option value="AlGaSb">AlGaSb</option>
-                        <option value="AlInP">AlInP</option>
-                        <option value="AlInAs">AlInAs</option>
-                        <option value="GaPAs">GaPAs</option>
-                        <option value="GaAsSb">GaAsSb</option>
-                        <option value="GaInP">GaInP</option>
-                        <option value="GaInAs">GaInAs</option>
-                        <option value="GaInSb">GaInSb</option>
-                        <option value="InPAs">InPAs</option>
-                        <option value="InPSb">InPSb</option>
-                        <option value="InAsSb">InAsSb</option>
+                        <option value="AlAsSb">AlAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                        <option value="AlGaP">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>P</option>
+                        <option value="AlGaAs">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>As</option>
+                        <option value="AlGaSb">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>Sb</option>
+                        <option value="AlInP">Al<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                        <option value="AlInAs">Al<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                        <option value="GaPAs">GaP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                        <option value="GaAsSb">GaAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                        <option value="GaInP">Ga<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                        <option value="GaInAs">Ga<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                        <option value="GaInSb">Ga<sub>(x)</sub>In<sub>(1-x)</sub>Sb</option>
+                        <option value="InPAs">InP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                        <option value="InPSb">InP<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                        <option value="InAsSb">InAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
                     </optgroup>
 
                     <optgroup label="Quaternary">
-                        <option value="AlGaInP">AlGaInP</option>
-                        <option value="AlGaInAs">AlGaInAs</option>
-                        <option value="AlGaAsSb">AlGaAsSb</option>
-                        <option value="GaInPAs">GaInPAs</option>
-                        <option value="GaInAsSb">GaInAsSb</option>
-                        <option value="InPAsSb">InPAsSb</option>
+                        <option value="AlGaInP">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>P</option>
+                        <option value="AlGaInAs">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>As</option>
+                        <option value="AlGaAsSb">Al<sub>(x)</sub>GaAs<sub>(y)</sub>Sb(1-y)</option>
+                        <option value="GaInPAs">Ga<sub>(x)</sub>InP<sub>(y)</sub>As(1-y)</option>
+                        <option value="GaInAsSb">Ga<sub>(x)</sub>InAs<sub>(y)</sub>Sb(1-y)</option>
+                        <option value="InPAsSb">InP<sub>(x)</sub>As<sub>(y)</sub>Sb<sub>(1-x-y)</sub></option>
                     </optgroup>
 
                     </select>
                     <label for="x1">x: </label>
-                    <input type="text" name="x1">
+                    <input type="text" name="x1" placeholder="x =">
                     <label for="y1">y: </label>
-                    <input type="text" name="y1">
+                    <input type="text" name="y1" placeholder="y =">
                 </div>
                 <div id="material2-container">
                     <select name="material2" id="material2">
@@ -76,36 +77,36 @@
                         </optgroup>
         
                         <optgroup label="Ternary">
-                            <option value="AlAsSb">AlAsSb</option>
-                            <option value="AlGaP">AlGaP</option>
-                            <option value="AlGaAs">AlGaAs</option>
-                            <option value="AlGaSb">AlGaSb</option>
-                            <option value="AlInP">AlInP</option>
-                            <option value="AlInAs">AlInAs</option>
-                            <option value="GaPAs">GaPAs</option>
-                            <option value="GaAsSb">GaAsSb</option>
-                            <option value="GaInP">GaInP</option>
-                            <option value="GaInAs">GaInAs</option>
-                            <option value="GaInSb">GaInSb</option>
-                            <option value="InPAs">InPAs</option>
-                            <option value="InPSb">InPSb</option>
-                            <option value="InAsSb">InAsSb</option>
-                        </optgroup>
+                                <option value="AlAsSb">AlAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                <option value="AlGaP">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>P</option>
+                                <option value="AlGaAs">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>As</option>
+                                <option value="AlGaSb">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>Sb</option>
+                                <option value="AlInP">Al<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                                <option value="AlInAs">Al<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                                <option value="GaPAs">GaP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                                <option value="GaAsSb">GaAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                <option value="GaInP">Ga<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                                <option value="GaInAs">Ga<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                                <option value="GaInSb">Ga<sub>(x)</sub>In<sub>(1-x)</sub>Sb</option>
+                                <option value="InPAs">InP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                                <option value="InPSb">InP<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                <option value="InAsSb">InAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                            </optgroup>
         
-                        <optgroup label="Quaternary">
-                            <option value="AlGaInP">AlGaInP</option>
-                            <option value="AlGaInAs">AlGaInAs</option>
-                            <option value="AlGaAsSb">AlGaAsSb</option>
-                            <option value="GaInPAs">GaInPAs</option>
-                            <option value="GaInAsSb">GaInAsSb</option>
-                            <option value="InPAsSb">InPAsSb</option>
-                        </optgroup>
+                            <optgroup label="Quaternary">
+                                <option value="AlGaInP">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>P</option>
+                                <option value="AlGaInAs">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>As</option>
+                                <option value="AlGaAsSb">Al<sub>(x)</sub>GaAs<sub>(y)</sub>Sb(1-y)</option>
+                                <option value="GaInPAs">Ga<sub>(x)</sub>InP<sub>(y)</sub>As(1-y)</option>
+                                <option value="GaInAsSb">Ga<sub>(x)</sub>InAs<sub>(y)</sub>Sb(1-y)</option>
+                                <option value="InPAsSb">InP<sub>(x)</sub>As<sub>(y)</sub>Sb<sub>(1-x-y)</sub></option>
+                            </optgroup>
             
                     </select>
                     <label for="x2">x: </label>
-                    <input type="text" name="x2">
+                    <input type="text" name="x2" placeholder="x =">
                     <label for="y2">y: </label>
-                    <input type="text" name="y2">
+                    <input type="text" name="y2" placeholder="y =">
                 </div>
                 
                 <div id="material3-container">
@@ -124,40 +125,85 @@
                             </optgroup>
             
                             <optgroup label="Ternary">
-                                <option value="AlAsSb">AlAsSb</option>
-                                <option value="AlGaP">AlGaP</option>
-                                <option value="AlGaAs">AlGaAs</option>
-                                <option value="AlGaSb">AlGaSb</option>
-                                <option value="AlInP">AlInP</option>
-                                <option value="AlInAs">AlInAs</option>
-                                <option value="GaPAs">GaPAs</option>
-                                <option value="GaAsSb">GaAsSb</option>
-                                <option value="GaInP">GaInP</option>
-                                <option value="GaInAs">GaInAs</option>
-                                <option value="GaInSb">GaInSb</option>
-                                <option value="InPAs">InPAs</option>
-                                <option value="InPSb">InPSb</option>
-                                <option value="InAsSb">InAsSb</option>
-                            </optgroup>
+                                    <option value="AlAsSb">AlAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                    <option value="AlGaP">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>P</option>
+                                    <option value="AlGaAs">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>As</option>
+                                    <option value="AlGaSb">Al<sub>(x)</sub>Ga<sub>(1-x)</sub>Sb</option>
+                                    <option value="AlInP">Al<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                                    <option value="AlInAs">Al<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                                    <option value="GaPAs">GaP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                                    <option value="GaAsSb">GaAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                    <option value="GaInP">Ga<sub>(x)</sub>In<sub>(1-x)</sub>P</option>
+                                    <option value="GaInAs">Ga<sub>(x)</sub>In<sub>(1-x)</sub>As</option>
+                                    <option value="GaInSb">Ga<sub>(x)</sub>In<sub>(1-x)</sub>Sb</option>
+                                    <option value="InPAs">InP<sub>(x)</sub>As<sub>(1-x)</sub></option>
+                                    <option value="InPSb">InP<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                    <option value="InAsSb">InAs<sub>(x)</sub>Sb<sub>(1-x)</sub></option>
+                                </optgroup>
             
-                            <optgroup label="Quaternary">
-                                <option value="AlGaInP">AlGaInP</option>
-                                <option value="AlGaInAs">AlGaInAs</option>
-                                <option value="AlGaAsSb">AlGaAsSb</option>
-                                <option value="GaInPAs">GaInPAs</option>
-                                <option value="GaInAsSb">GaInAsSb</option>
-                                <option value="InPAsSb">InPAsSb</option>
-                            </optgroup>
+                                <optgroup label="Quaternary">
+                                    <option value="AlGaInP">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>P</option>
+                                    <option value="AlGaInAs">Al<sub>(x)</sub>Ga<sub>(y)</sub>In<sub>(1-x-y)</sub>As</option>
+                                    <option value="AlGaAsSb">Al<sub>(x)</sub>GaAs<sub>(y)</sub>Sb(1-y)</option>
+                                    <option value="GaInPAs">Ga<sub>(x)</sub>InP<sub>(y)</sub>As(1-y)</option>
+                                    <option value="GaInAsSb">Ga<sub>(x)</sub>InAs<sub>(y)</sub>Sb(1-y)</option>
+                                    <option value="InPAsSb">InP<sub>(x)</sub>As<sub>(y)</sub>Sb<sub>(1-x-y)</sub></option>
+                                </optgroup>
                 
                     </select>
                     <label for="x3">x: </label>
-                    <input type="text" name="x3">
+                    <input type="text" name="x3" placeholder="x =">
                     <label for="y3">y: </label>
-                    <input type="text" name="y3">
+                    <input type="text" name="y3" placeholder="y =">
                 </div>
-                <button type="submit" value="send">Calculate!</button>
+                <button type="submit" class="btn btn-primary" value="send">Calculate!</button>
             </form>
     </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="mt" id="mt-1">
+                <p>Material1</p>
+                <p>e.g. Channel..</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mt" id="mt-2">
+                <p>Material2</p>
+                <p>e.g. Buffer..</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mt" id="mt-3">
+                <p>Material3</p>
+                <p>e.g. Substrate, Back barrier..</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container" id="note">
+        <div class="row">
+            <h3>Band Alignment</h3>
+        </div>
+        <div class="row">
+            <h5>This is a tool for band alignment simulation considering 
+                strain effect in a heterostructure of III-V materials. You can
+                chose three material name from the form boxes and input compound material 
+                composition in 0.0 ~ 1.0 where x is for a ternary material while, y is for a quaternary 
+                material. hence, if you want to get a binary or a ternary material band alignment, you can just inpiut 
+                only x value. 
+            </h5>
+        </div>
+        <div class="row">
+
+        </div>
+
+    </div>
+
+
+
     </div>
 
     
