@@ -159,47 +159,56 @@
                 <button type="submit" class="btn btn-primary" value="send">Calculate!</button>
             </form>
     </div>
-    <br>
 
-    <div class="container">
-        <div class="row">
-            <div class="mt" id="mt-1">
-                <p>Material1</p>
-                <p>e.g. Channel..</p>
+
+    <div class="row note">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Structure Example</h5>
+                    <div class="container" id="structure">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="mt" id="mt-1">
+                                    <h5>Material1</h5>
+                                    <p>e.g. Channel..</p>
+                                </div>
+                                <div class="mt" id="mt-2">
+                                    <h5>Material2</h5>
+                                    <p>e.g. Buffer..</p>
+                                </div>
+                                <div class="mt" id="mt-3">
+                                    <h5>Material3</h5>
+                                    <p>e.g. Substrate..</p>
+                                </div> 
+                            </div>  
+                            <p class="col-sm">
+                                First of all, you need to set the material3 as reference material like buffer material, or substrate one.
+                                And then, you can just set following epitaxial layer on the reference material (i.e. material3).
+                                Both material1 and material2 are got strained by material3, please make sure you have correct order of epitaxial layer
+                                before pushing "Calculate" button.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/funabashi800/Bandoffset" class="btn btn-primary">Check Reference! </a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="mt" id="mt-2">
-                <p>Material2</p>
-                <p>e.g. Buffer..</p>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">What's this program for?</h5>
+                    <p class="card-text">
+                        This is a tool for band alignment simulation considering strain effect in a heterostructure of III-V materials. You can
+                        chose three material name from the form boxes and input compound material 
+                        composition in 0.0 ~ 1.0 where x is for a ternary material while, y is for a quaternary 
+                        material. hence, if you want to get a binary or a ternary material band alignment, you can just inpiut 
+                        only x value. 
+                    </p>
+                    <a href="https://github.com/funabashi800/Bandoffset" class="btn btn-primary">Check Code!</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="mt" id="mt-3">
-                <p>Material3</p>
-                <p>e.g. Substrate, Back barrier..</p>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="container" id="note">
-        <div class="row">
-            <h3>Band Alignment</h3>
-        </div>
-        <div class="row">
-            <h5>This is a tool for band alignment simulation considering 
-                strain effect in a heterostructure of III-V materials. You can
-                chose three material name from the form boxes and input compound material 
-                composition in 0.0 ~ 1.0 where x is for a ternary material while, y is for a quaternary 
-                material. hence, if you want to get a binary or a ternary material band alignment, you can just inpiut 
-                only x value. 
-            </h5>
-        </div>
-        <div class="row">
-
-        </div>
-
     </div>
 
 

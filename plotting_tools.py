@@ -63,7 +63,7 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
     ## Set the limits of the axes
     ax1.set_ylim(-limit,0)
     ax2.set_ylim(-limit,0)
-    ax1.set_xlim(-0.5,len(energies)-0.5)
+    ax1.set_xlim(-0.0,len(energies))
 
     ## Set the names
     ax1.set_xticks(ind)
@@ -76,15 +76,15 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
     ax1.set_ylabel('Energy (eV)', size=textsize)
 
 
-    os1 = 0.15   # Offset of the text 'IP' in the plot
-    os2 = 0.2    # Offset of the text 'EA' in the plot
+    os1 = -0.15   # Offset of the text 'IP' in the plot
+    os2 = -0.2    # Offset of the text 'EA' in the plot
 
     for i, en in enumerate(energies):
-        ax1.arrow(i-0.25,-en[0],0, en[0]-arrowhead, width=0.005,
+        ax1.arrow(i+0.75,-en[0],0, en[0]-arrowhead, width=0.005,
                   head_length=arrowhead,head_width=0.07, fc='black',ec='None')
-        ax1.arrow(i-0.25,0,0, -en[1]+arrowhead, width=0.005,
+        ax1.arrow(i+0.75,0,0, -en[1]+arrowhead, width=0.005,
                   head_length=arrowhead,head_width=0.07, fc='black',ec='None')
-        ax1.arrow(i-0.25,0,0, -en[0]+arrowhead, width=0.005,
+        ax1.arrow(i+0.75,0,0, -en[0]+arrowhead, width=0.005,
                   head_length=arrowhead,head_width=0.07, fc='black',ec='None')
         loc_ip = -(en[0] + en[1]) / 2
         ax1.text(i-os1,loc_ip,"IP  %3.1f"%en[1],fontsize=textsize)
@@ -98,8 +98,8 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
         ax2.minorticks_on()
 
     for ref in references:
-        ax1.hlines(-ref[1], -0.5, len(energies) - 0.5,
-                   linestyles='--', colors='r')
+        ax1.hlines(-ref[1], -0.5, len(energies) - 0.5,linestyles='--', colors='r')
+        #ax1.hlines(len(energies) - 0.45, -ref[1] - 0.1, ref[0],linestyles='--', colors='r')
         ax1.text(len(energies) - 0.45, -ref[1] - 0.1, ref[0],
                  fontsize=textsize, color='r')
 
