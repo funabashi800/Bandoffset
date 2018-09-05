@@ -106,7 +106,7 @@ def energy_band_alignment_diagram(energies, materials, limit=8., width=1.,
     #fig.savefig('/Users/takahiro/workspace/bandoffset/img/%s.eps'%outfile,bbox_inches='tight')
     #fig.savefig('%s.png'%outfile,bbox_inches='tight')
     fig.savefig('static/images/BandAlignment.png', bbox_inches='tight')
-    #plt.savefig('static/images/BandAlignment.png', bbox_inches='tight')
+    #plt.savefig('static/images/BandAlignment2.png', bbox_inches='tight')
     
     #plt.show()
     #print("Figure saved as %s.eps and %s.png"%(outfile, outfile))

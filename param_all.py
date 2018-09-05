@@ -538,10 +538,10 @@ class AlGaInAs(object):
 
 class AlGaAsSb(object):
     def __init__(self,x,y): 
-        a = AlGaAs()
-        b = AlGaSb()
-        c = AlAsSb()
-        d = GaAsSb()
+        a = AlGaAs(x,y)
+        b = AlGaSb(x,y)
+        c = AlAsSb(y,x)
+        d = GaAsSb(y,x)
 
         self.lattice_constant = (x*(1-x)*(y*a.lattice_constant+(1-y)*b.lattice_constant))/(x*(1-x)+y*(1-y)) \
             + (y*(1-y)*(x*c.lattice_constant+(1-x)*d.lattice_constant))/(x*(1-x)+y*(1-y))
@@ -572,10 +572,10 @@ class AlGaAsSb(object):
 
 class GaInPAs(object):
     def __init__(self,x,y): 
-        a = GaInP()
-        b = GaInAs()
-        c = GaPAs()
-        d = InPAs()
+        a = GaInP(x,y)
+        b = GaInAs(x,y)
+        c = GaPAs(y,x)
+        d = InPAs(y,x)
 
         self.lattice_constant = (x*(1-x)*(y*a.lattice_constant+(1-y)*b.lattice_constant))/(x*(1-x)+y*(1-y)) \
             + (y*(1-y)*(x*c.lattice_constant+(1-x)*d.lattice_constant))/(x*(1-x)+y*(1-y))
@@ -606,10 +606,10 @@ class GaInPAs(object):
 
 class GaInAsSb(object):
     def __init__(self,x,y): 
-        a = GaInAs()
-        b = GaInSb()
-        c = GaAsSb()
-        d = InAsSb()
+        a = GaInAs(x,y)
+        b = GaInSb(x,y)
+        c = GaAsSb(y,x)
+        d = InAsSb(y,x)
 
         self.lattice_constant = (x*(1-x)*(y*a.lattice_constant+(1-y)*b.lattice_constant))/(x*(1-x)+y*(1-y)) \
             + (y*(1-y)*(x*c.lattice_constant+(1-x)*d.lattice_constant))/(x*(1-x)+y*(1-y))
