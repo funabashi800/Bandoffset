@@ -312,6 +312,28 @@ class AlInAs(object):
         print("Spin orbit : {}".format(self.spin_orbit))
         print("Band gap : {}".format(self.band_gap))
 
+class AlInSb(object):
+    def __init__(self,x,y):
+        a = AlSb(x,y)
+        b = InSb(x,y)
+        self.lattice_constant = x*a.lattice_constant+(1.0-x)*b.lattice_constant
+        self.elastic_constant_11 = x*a.elastic_constant_11+(1.0-x)*b.elastic_constant_11
+        self.elastic_constant_12 = x*a.elastic_constant_12+(1.0-x)*b.elastic_constant_12
+        self.elastic_constant_44 = x*a.elastic_constant_44+(1.0-x)*b.elastic_constant_44
+        self.valence_band_average = x*a.valence_band_average+(1.0-x)*b.valence_band_average
+        self.spin_orbit_splitting = x*a.spin_orbit_splitting+(1.0-x)*b.spin_orbit_splitting+x*(1.0-x)*0.15
+        self.band_gap = x*a.band_gap+(1.0-x)*b.band_gap+x*(1.0-x)*0.70
+        self.deformation_valence = x*a.deformation_valence+(1.0-x)*b.deformation_valence
+        self.deformation_conduction = x*a.deformation_conduction+(1.0-x)*b.deformation_conduction
+        self.conduction_band = 0.0
+        self.valence_band = 0.0
+
+    def info(self):
+        print("Lattice constant : {}".format(self.lattice_constant))
+        print("Valence band average : {}".format(self.valence_band_average))
+        print("Spin orbit : {}".format(self.spin_orbit))
+        print("Band gap : {}".format(self.band_gap))
+
 class GaPAs(object):
     def __init__(self,x,y):
         a = GaP(x,y)
